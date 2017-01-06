@@ -1,10 +1,12 @@
-var React = require("react");
+import React from "react";
+import MeteoUnJour from "../components/MeteoUnJour";
 
-function MeteoUnJourContainer(){
-  return (
-    <div>
-    </div>
-  )
+class MeteoUnJourContainer extends React.Component {
+  render() {
+    return (
+      <MeteoUnJour/>
+    );
+  }
 }
 
-module.exports = MeteoUnJourContainer;
+export default MeteoUnJourContainer;

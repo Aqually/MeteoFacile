@@ -1,0 +1,7 @@
+body,html,#app, #app > div{
+  height: 100%;
+}
+
+.smallMargin{
+  margin: 0.25em;
+}

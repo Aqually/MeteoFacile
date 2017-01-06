@@ -1,12 +1,17 @@
-var React = require("react");
+import React from "react";
+import BoutonMeteo from "../components/BoutonMeteo";
+import InputVille from "../components/InputVille";
 
-var styles = {
+const styles = {
   nav: {
     margin: 0,
     padding: 0,
-    height: "75px",
     width: "100%",
-    backgroundColor: "#d87701"
+    height:"100%",
+    backgroundColor: "#d87701",
+    display:"flex",
+    justifyContent:"space-between",
+    alignItems: "center"
   },
   h1:{
     margin: 0,
@@ -14,18 +19,25 @@ var styles = {
     padding: 0,
     fontSize: "3em",
     lineHeight: "1.8em",
-    color: "white"
+    color: "white",
+    width:"50%"
+  },
+  formMeteo:{
+    display:"flex",
+    padding: "0.5em",
+  },
+  divHeader:{
+    height:"10%"
   }
 }
 
-var Header = React.createClass({
-    render: function(){
-        return (
-            <nav style={styles.nav}>
-                <h1 style={styles.h1}>Météo Facile</h1>
-            </nav>
-        )
-    }
-});
+const Header = () => (
+  <div style={styles.divHeader}>
+    <nav style={styles.nav}>
+        <h1 style={styles.h1}>Météo Facile</h1>
+        <div style={styles.formMeteo}><InputVille/><BoutonMeteo/></div>
+    </nav>
+  </div>
+);
 
-module.exports = Header;
+export default Header;

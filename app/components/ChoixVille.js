@@ -1,13 +1,13 @@
-var React = require("react");
-var ReactRouter = require("react-router");
-var ChoixVilleContainer = require("./ChoixVilleContainer");
+import React from "react";
+import BoutonMeteo from "../components/BoutonMeteo";
+import InputVille from "../components/InputVille";
 
-var ChoixVille = React.createClass({
-    render: function(){
-        return(
-            <h2>Choisir votre ville</h2>
-        )
-    }
-});
+const ChoixVille = () => (
+  <div>
+    <h2>Choisir votre ville</h2>
+    <InputVille/>
+    <BoutonMeteo/>
+  </div>
+);
 
-module.exports = ChoixVille;
+export default ChoixVille;

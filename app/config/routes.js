@@ -1,3 +1,7 @@
+/*
+* Pour contrôler les routes de l'application
+*/
+
 import React from 'react';
 import {render} from 'react-dom';
 import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'

@@ -1,10 +1,12 @@
-var React = require("react");
+import React from "react";
+import MeteoVille from "../components/MeteoVille";
 
-function MeteoVilleContainer(){
-  return (
-    <div>
-    </div>
-  )
+class MeteoVilleContainer extends React.Component {
+  render() {
+    return (
+      <MeteoVille/>
+    );
+  }
 }
 
-module.exports = MeteoVilleContainer;
+export default MeteoVilleContainer;

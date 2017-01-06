@@ -1,11 +1,12 @@
-var React = require("react");
+import React from "react";
+import ChoixVille from "../components/ChoixVille";
 
-function ChoixVilleContainer(props){
-  return (
-    <div>
-      <h2>Choisir votre ville</h2>
-    </div>
-  )
+class ChoixVilleContainer extends React.Component {
+  render() {
+    return (
+      <ChoixVille/>
+    );
+  }
 }
 
-module.exports = ChoixVilleContainer;
+export default ChoixVilleContainer;
