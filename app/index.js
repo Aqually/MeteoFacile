@@ -6,13 +6,20 @@
 
 import React from 'react';
 import {render} from 'react-dom';
-import Header from './components/Header';
-import routes from "./config/routes"
+import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
+import Main from './components/Main';
+import ChoixVille from './components/ChoixVille';
+import InputVilleContainer from "./containers/InputVilleContainer";
+import MeteoVilleContainer from "./containers/MeteoVilleContainer";
+import MeteoUnJourContainer from "./containers/MeteoUnJourContainer";
 
 render(
-  <div>
-    <Header/>
-    {routes}
-  </div>,
-  document.getElementById('app')
+   <Router history={hashHistory}>
+     <Route path='/' component={Main}>
+       <IndexRoute component={ChoixVille} />
+       <Route path="MeteoVille/" component={MeteoVilleContainer}/>
+       <Route path="/MeteoUnJour/:ville/:jour" component={MeteoUnJourContainer}/>
+     </Route>
+   </Router>,
+   document.getElementById('app')
 );

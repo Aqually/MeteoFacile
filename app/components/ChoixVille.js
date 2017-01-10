@@ -1,12 +1,10 @@
 import React from "react";
-import BoutonMeteo from "../components/BoutonMeteo";
-import InputVille from "../components/InputVille";
+import InputVilleContainer from "../containers/InputVilleContainer";
 
-const ChoixVille = () => (
+const ChoixVille = (props) => (
   <div>
     <h2>Choisir votre ville</h2>
-    <InputVille/>
-    <BoutonMeteo/>
+    <InputVilleContainer />
   </div>
 );
 

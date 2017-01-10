@@ -1,5 +1,5 @@
 import React from "react";
-
+import Header from "./Header"
 require("../main.css");
 
 const styles = {
@@ -13,6 +13,16 @@ const styles = {
   },
 }
 
-const Main = (props) => (<main style={styles.main}>{props.children}</main>);
+const Main = (props,context) => (
+   <div>
+      <Header />
+      <main style={styles.main}>
+         <div>
+
+            {props.children}
+         </div>
+      </main>
+   </div>
+)
 
 export default Main;

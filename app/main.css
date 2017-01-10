@@ -5,3 +5,7 @@ body,html,#app, #app > div{
 .smallMargin{
   margin: 0.25em;
 }
+
+.div-header form{
+   display: flex;
+}

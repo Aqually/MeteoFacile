@@ -1,6 +1,5 @@
 import React from "react";
-import BoutonMeteo from "../components/BoutonMeteo";
-import InputVille from "../components/InputVille";
+import InputVilleContainer from "../containers/InputVilleContainer";
 
 const styles = {
   nav: {
@@ -23,7 +22,6 @@ const styles = {
     width:"50%"
   },
   formMeteo:{
-    display:"flex",
     padding: "0.5em",
   },
   divHeader:{
@@ -31,11 +29,11 @@ const styles = {
   }
 }
 
-const Header = () => (
+const Header = (props) => (
   <div style={styles.divHeader}>
     <nav style={styles.nav}>
         <h1 style={styles.h1}>Météo Facile</h1>
-        <div style={styles.formMeteo}><InputVille/><BoutonMeteo/></div>
+        <div className="div-header" style={styles.formMeteo}><InputVilleContainer /></div>
     </nav>
   </div>
 );
