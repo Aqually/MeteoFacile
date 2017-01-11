@@ -17,7 +17,7 @@ render(
    <Router history={hashHistory}>
      <Route path='/' component={Main}>
        <IndexRoute component={ChoixVille} />
-       <Route path="MeteoVille/" component={MeteoVilleContainer}/>
+       <Route path="meteo/:ville" component={MeteoVilleContainer}/>
        <Route path="/MeteoUnJour/:ville/:jour" component={MeteoUnJourContainer}/>
      </Route>
    </Router>,

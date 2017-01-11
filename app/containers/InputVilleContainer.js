@@ -15,13 +15,12 @@ class InputVilleContainer extends React.Component {
       e.preventDefault();
       var ville = this.state.ville;
       this.setState({ville});
+      console.log(ville);
 
       if(ville){
+        console.log("route change?",ville);
          this.context.router.replace({
-            pathname: "meteoville/",
-            query: {
-               ville: this.state.ville
-            }
+            pathname: "/meteo/" + ville
          })
       }
    }
